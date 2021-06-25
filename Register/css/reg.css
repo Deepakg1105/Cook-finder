@@ -1,0 +1,223 @@
+*{
+    font-family: cursive;
+    margin:0vw;
+    padding: 0vw;
+}
+section
+{
+    box-sizing: border-box;
+    /*background-image:linear-gradient(rgba(0,0,0,.5),rgba(63, 8, 6, 0.5),rgba(3, 41, 22, 0.8));*/
+    background-color: white;
+    height: 100vh;
+    background-size:cover;
+    background-position: center;
+    margin-top: 0vh;
+
+    position: fixed;
+  
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 1.5vw;
+}
+section .login
+{
+    float: right;
+    color: rgba(235, 102, 49, 0.678);
+    margin-right: 2vw;
+}
+section .login a
+{
+    text-decoration: none;
+    
+}
+section .login a:hover{
+    font-size: 120%;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgb(0, 0, 0);
+    font-family: monospace;
+    border: red;
+    font-style: italic;
+}
+
+.all{
+    float: right;
+    background-size:cover;
+    background-position: center;
+    height: 100vh;
+    margin-top: 0.75vw;
+    margin-right: 10%;
+    opacity: .4;
+}
+.all:hover{
+    float: right;
+    background-size:cover;
+    background-position: center;
+    height: 100vh;
+    margin-top: 0.75vw;
+    margin-right: 10%;
+    opacity: .8;
+}
+.all .hd
+{
+      background-color: rgb(14, 12, 12);
+      height: 2.85vw;
+      width: 24.75vw;
+      box-shadow: 0vw 0vw 0.75vw 0.075vw rgba(7, 6, 6, .8);
+      border-radius: 0.375vw 0.525vw 0vw 0vw;
+      border-style: inset groove hidden hidden;
+      
+}
+.all .hd .reg_head
+{
+
+    color: white;
+    font-size: 2.1vw;
+}
+.all .form
+{
+  height: auto;
+  width: auto;
+  box-shadow: 0vw 0.375vw 1.125vw 0vw rgba(7, 6, 6, .8);
+  border-radius: 0.3vw;
+  background-image:linear-gradient(rgba(0,0,0,.1),rgba(95, 214, 111, 0.1),rgba(88, 113, 165, 0.1)), url(../chef.jpeg);
+  opacity: 90%;
+  
+        
+}
+.all .form .reg_card
+{
+    margin-left: 0.6vw;
+    margin-right: 1.2vw;
+}
+.all .form .reg_card .reg_submit
+{
+
+    padding-left: 1.875vw;
+    background-color: #5f7;
+    padding-right: 1.875vw;
+}
+
+.all .form .reg_card .reg_submit .smt{
+    position: center;
+    font-size: 2vw;
+}
+.smt{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 38%;
+    padding-right: 38%;
+    position: center;
+    background-color:white;
+}
+.smt:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-style: italic;
+    
+}
+
+.all .form .reg_card .reg_table
+{
+   
+}
+.all .form .reg_card .reg_table .row
+{
+   font-size: 1.1vw;
+}
+.td
+{
+    color: rgb(155, 204, 171);
+    font-size: 1.5vw;
+    float: left;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0vw;
+  bottom: 0vw;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+label{
+    color: white;
+    cursor: pointer;
+    
+}
+label:hover{
+    color:white;
+    font-size: 120%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    text-shadow: 2px 2px red;
+}
+.span{
+    color:white;
+    cursor: pointer;
+}
+.span:hover{
+    color:red;
+    background-color: white;
+    
+}
+
+
+
+
+
+
+
+section .menubar
+{
+    
+}
+
+section .menubar ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 0.75vw;
+}
+section .menubar ul li
+{
+    display: inline;
+    padding-top: 2.25vw ;
+    
+  
+}
+
+section .menubar ul li a
+{
+    cursor: pointer;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.692);
+    
+    color: rgb(255, 255, 255);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+    
+    font-size: 1.5vw;
+    padding-left: 0.15vw;
+    padding-right: 0.15vw;
+    transition: 0.6s ease;
+    text-align: center;
+    opacity: 0.1;
+
+    border: 0.075vw double transparent;
+    border-radius: 10% 0% 10% 0%;
+    
+}
+section .menubar ul li a:hover
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    color:rgba(210, 219, 219, 0.8);
+    font-family: 'Times New Roman', Times, serif;
+    border-style: groove hidden groove hidden;
+    border-color: rgba(125, 231, 151, 0.856);
+    border-radius: 10% 0% 10% 0%;
+    opacity: 1;
+    
+}
+
+
+

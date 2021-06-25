@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Cook</title>
+  <link rel="stylesheet" type="text/css" href="css/recipe_css.css">
+
+  <style>
+    .content {
+      padding-top: 15vw;
+
+      padding-left: 2.25vw;
+    }
+    .card1 {
+      height: 34.125vw;
+      width: 67.5vw;
+      box-shadow: 0vw 1.125vw 1.875vw 0vw rgba(153, 153, 153, 0.5);
+      border-radius: 0.3vw;
+      background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(95, 214, 111, 0.5), rgba(88, 113, 165, 0.8));
+      margin-left: 7.5vw;
+      margin-bottom: 5.25vw;
+      margin-top: 5.25vw;
+
+    }
+
+    .card1:hover {
+      background-image: linear-gradient(rgba(133, 87, 87, 0.7), rgba(95, 176, 214, 0.7), rgba(165, 110, 88, 0.849));
+      box-shadow: 0.75vw 1.125vw 1.875vw 0.75vw rgba(153, 153, 153, 0.8);
+    }
+
+    .card2 {
+      height: 34.125vw;
+      width: 67.5vw;
+      box-shadow: 0vw 1.125vw 1.875vw 0vw rgba(153, 153, 153, 0.5);
+      border-radius: 0.3vw;
+      background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(95, 214, 111, 0.5), rgba(57, 87, 59, 0.8));
+      margin-left: 22.5vw
+    }
+
+    .card2:hover {
+      box-shadow: 0.75vw 1.125vw 1.875vw 0.75vw rgba(153, 153, 153, 0.5);
+      background-image: linear-gradient(rgba(129, 43, 43, 0.5), rgba(23, 97, 33, 0.5), rgba(44, 168, 52, 0.8));
+    }
+     .right {
+      margin-left: 28.425vw;
+      padding-right: 0.3vw;
+      height: 31vw;
+
+      padding-top: 2.25vw;
+    }
+
+    .right .h2,
+    .h3 {
+      font-size: 1vw;
+
+      font-weight: bold;
+
+
+    }
+
+    .right .ingre {
+      font-size: 0.975vw;
+      padding-bottom: 0.375vw;
+      padding-top: 0vw;
+      font-weight: lighter;
+      border-bottom-style: inset;
+      border-bottom-width: 0.075vw;
+
+      border-color: orangered;
+      width: 100%;
+
+    }
+
+    .right .recipe {
+      padding-left: 0.15vw;
+      padding-top: 0.375vw;
+      font-size: 0.975vw;
+    }
+
+    .left {
+      float: left;
+      width: 28.125vw;
+      
+    }
+
+    .left .top {
+      box-sizing: border-box;
+
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #222;
+    }
+
+    
+
+    .left .top {
+      height: 55%;
+      border-radius: 0.3vw 0vw 0vw 0.3vw;
+      border: 0vw solid #ddd;
+      /* Setting a background image */
+
+      padding: 0vw 1.2vw;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      background-color: rgba(#1f4135, 0.5);
+    }
+
+    #top1 {
+      background-image: url(kitten1.jpg);
+    }
+
+    #top2 {
+      background-image: url(chickenB.jpg);
+    }
+
+    #top3 {
+      background-image: url(chickenB2.jpg);
+    }
+
+    #top4 {
+      background-image: url(vegB.jpg);
+    }
+
+    .name {
+      padding-top: calc(35.625vw * 0.70);
+      margin: 0vw;
+      text-shadow: 0.15vw 0.15vw red;
+      color: white;
+      font-size: 150%;
+    }
+
+    .veg {
+      display: inline-block;
+      width: 0.75vw;
+      height: 0.75vw;
+      margin-left: 0.3vw;
+
+      border-radius: 0.375vw;
+      background-color: rgb(44, 216, 10);
+    }
+
+    .non-veg {
+      display: inline-block;
+      width: 0.75vw;
+      height: 0.75vw;
+      margin-left: 0.3vw;
+
+      border-radius: 0.375vw;
+      background-color: rgb(61, 5, 5);
+    }
+
+    .cook-time {
+      margin-top: 0.6vw;
+    }
+
+    .middle {
+      height: 5%;
+      border-top: 0.075vw solid #ddd;
+      border-bottom: 0.075vw solid #ddd;
+      padding: 0.075vw 0vw;
+
+    }
+
+    #serv {
+      color: #444;
+      font-size: 1.15vw;
+      padding-top: 0.15vw;
+      padding-left: 0.75vw;
+
+    }
+
+    #serv:hover {
+      text-shadow: 0.15vw 0.15vw white;
+      color: black;
+    }
+
+    .bottom {
+      height: 40%;
+
+      border-radius: 0vw 0vw 0.3vw 0.3vw;
+      border: 00vw solid #ddd;
+      padding: 0vw 0.3vw;
+      background-color: grey;
+
+    }
+
+    .profile-action {
+      display: block;
+      width: 80%;
+      height: 2.4vw;
+      /* You could also just set the font family explicitly like we did for the body. */
+      font-family: inherit;
+      font-size: 0.75vw;
+      text-align: left;
+      /* The border-radius property allows for round corners. */
+      border-radius: 0.3vw;
+      border: 0vw;
+      background-color: #fff;
+      /* This is how we changed the cursor to be a hand instead of an arrow. */
+
+      float: left;
+    }
+
+    .profile-action:hover {
+      background-color: #00A5D2;
+      color: white;
+    }
+
+    .bottom .like {
+
+      padding-top: 0.525vw;
+      padding-bottom: 0.375vw;
+      float: right;
+      background-color: gray;
+      display: block;
+      height: 1.875vw;
+      font-size: 0.75vw;
+      border-radius: 0.3vw;
+      border: 0vw;
+      cursor: pointer;
+    }
+
+    .bottom .like:hover {
+      background-color: lemonchiffon;
+      height: 2.25vw;
+    }
+
+    .by {
+      font-size: 140%;
+      text-transform: capitalize;
+      font-family: cursive;
+      padding-left: 0.75vw;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <div class="Header" id="head">
+      <div class="logo">
+        <img src="logo.png" alt="cook finder logo">
+      </div>
+
+      <ul>
+        <li><a href="../Home.html" target="_self">Home</a></li>
+        <li class="active"><a href="#">Recipes</a></li>
+        <li><a href="../Follow_Us/follow.html" target="_self" target="_self">Follow Us</a></li>
+        <li><a href="../Terms/TandC.html" target="_self">T & C s</a></li>
+        <li><a href="#"
+            onClick="window.open('../Share/share.html','Share','resizable,height=260,width=370'); return false;">Share</a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <section>
+        <div class="card1">
+          <div class="left">
+            <div class="top" id="top1">
+              <h3 class="name">Rajama Masaala <span class="veg"></span></h3>
+              <p class="cook-time">Cooking Time : 45 mins</p>
+            </div>
+            <div class="middle">
+              <div id="serv">Servings: 4</div>
+            </div>
+            <div class="bottom">
+              <button class="profile-action">By <span class="by">DeepikaG</span> </button>
+              <div class="like">
+                <button>Like <span>&#128077</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+
+            <p class="ingre"><span class="h3">Ingredients :</span>
+              Rajma Kidney Beans - 2 Cups (Soaked 8 Hours),
+              Onion - 3 Cups Chopped,
+              Tomato - 3 Cups Chopped,
+              Vegetable Oil - 3 Tbsp,
+              Water - 4 Cups,
+              Salt - 2 Tsp,
+              Kashmiri Red Chili Powder - 2 Tsp,
+              Turmeric Powder - 1/2 Tsp,
+              Rajma Masala - 3 Tsp,
+              Hing Asafoetida Powder - 1/2 Tsp,
+              Cumin - 2 Tsp,
+              Green Chili's - 3 Slit,
+              Ginger julienned - 1 inch,
+              Garlic - 2 Tbsp Chopped<br />
+
+              To add after Rajma are cooked :
+
+              Amchur Dried mango - 1 Tsp,
+              Garam Masala - 1.5 Tsp,
+              Ghee - 2 Tbsp,
+              Cilantro / Dhaniya Leaves - 3 Tbsp.
+            </p>
+
+            <p class="recipe"><span class="h2">Directions :</span>
+              Soak 2 Cups Rajma in Triple water over night or at least 6 Hours.
+              Take a Pressure cooker on Medium to High Heat.
+              Add Oil , Once the oil is heated add Jeera and Hing.
+              Once the Jeera starts to crackle add Onions.
+              Cook Onions till they start to turn Translucent. About 2 to 3 minutes.
+              Add Ginger, Garlic and Green Chillies.
+              Cook till raw smell of Ginger and Garlic Disappears. About 2 minutes.
+              Now Add Tomatoes and Salt. Cook till Tomatoes are soft and Mushy. About 4 minutes.
+              Add Kashmiri Red Chilli Powder, Turmeric and Rajma Masala.
+              Cook the whole mix for another 2 minutes.
+              Now add Water and Soaked Rajma.
+              Mix everything well.
+              Now Turn the flame to Medium Low flame and Close the pressure cooker Lid.
+              Cook for 7 to 10 Whistles (7 Liter cooker, May need more whistles for smaller Cookers).
+              After every other whistle shake the cooker a bit carefully so the Rajma Moves around in the cooker and
+              dont stick to the bottom and Burn.
+              After the whistles DO NOT OPEN THE COOKER. Let it depressurize on its own.
+              After opening the Cooker, Stir and Mash some Rajma Beans to the Cooker walls. Rajma Beans should be very
+              soft and you should not get any resistance while mashing them
+              Add , Amchur, Garam Masala and Ghee.
+              Mix well. If the consistency of Rajma is not thick and its runny then turn the flame to low , Mash some
+              more Rajma and Cook for 5 minutes on low.
+              Add Cilantro and Serve.
+            </p>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="left">
+            <div class="top" id="top2">
+              <!-- Here we changed the word from 'Stufent' to 'Student' -->
+              <h3 class="name">Hydrabadi Biryaani <span class="non-veg"></span></h3>
+              <p class="cook-time">Cooking Time : 30 mins</p>
+            </div>
+            <div class="middle">
+              <div id="serv">Servings: 3</div>
+            </div>
+            <div class="bottom">
+              <button class="profile-action">By <span class="by">Kane Thomas</span> </button>
+              <div class="like">
+                <button>Like <span>&#128077</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+
+            <p class="ingre"><span class="h3">Ingredients :</span>
+              1 Kg meat,
+              1 tbsp salt,
+              1 tbsp ginger garlic paste,
+              1 tbsp red chilli paste,
+              1 tbsp green chilli paste (sauteed brown onions to taste),
+              1/2 tbsp cardamom powder,
+              3-4 Cinnamon sticks,
+              1 tbsp cumin seeds,
+              4 Cloves,
+              A pinch of mace,
+              to taste mint leaves,
+              2 tbsp lemon juice,
+              250 gms curd,
+              4 tbsp clarified butter,
+              750 gms semi cooked rice,
+              1 tsp saffron,
+              1/2 cup water, and
+              1/2 cup oil.
+              Garnish ingredients:
+              Eggs, boiled,
+              Carrots, sliced, and
+              Cucumbers.
+
+            </p>
+
+            <p class="recipe"><span class="h2">Directions :</span><br><br>
+              1.
+              Clean the meat. Now in a pan add meat, salt, ginger garlic paste, red chilli powder, green chilli paste,
+              sauteed brown onions, cardamom powder, cinnamon, cumin seeds, cloves, mace, mint leaves and lemon
+              juice.<br><br>
+              2.
+              Mix all of these ingredients thoroughly together.<br><br>
+              3.
+              Add curd, clarified butter, semi cooked rice, saffron, water and oil. Mix it well.<br><br>
+              4.
+              Now apply sticky dough on the sides of the pan.<br><br>
+              5.
+              Cover with lid to seal it and cook for about 25 minutes.<br><br>
+              6.
+              Hyderabadi Biryani is ready to eat. Garnish it with boiled eggs, sliced carrots, cucumbers and serve hot.
+            </p>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="left">
+            <div class="top" id="top3">
+              <!-- Here we changed the word from 'Stufent' to 'Student' -->
+              <h3 class="name">Chicken Biryaani <span class="non-veg"></span></h3>
+              <p class="cook-time">Cooking Time : 55 mins</p>
+            </div>
+            <div class="middle">
+              <div id="serv">Servings: 4</div>
+            </div>
+            <div class="bottom">
+              <button class="profile-action">By <span class="by">Aadi Singh</span> </button>
+              <div class="like">
+                <button>Like <span>&#128077</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+
+            <p class="ingre"><span class="h3">Ingredients :</span>
+              1 cup boiled basmati rice,
+              1/2 teaspoon mint leaves,
+              salt as required,
+              2 tablespoon refined oil,
+              3 green cardamom,
+              2 clove,
+              2 onion,
+              1 teaspoon turmeric,
+              1 tablespoon garlic paste,
+              1 cup hung curd,
+              2 tablespoon coriander leaves,
+              water as required,
+              1 tablespoon ghee,
+
+              600 gm chicken,
+              1 tablespoon garam masala powder,
+              1 dash saffron,
+              1 tablespoon bay leaf,
+              1 black cardamom,
+              1 teaspoon cumin seeds,
+              4 green chillies,
+              1 tablespoon ginger paste,
+              1 teaspoon red chilli powder,
+              1/2 tablespoon ginger,
+              2 drops kewra, and
+              1 tablespoon rose water.
+
+            </p>
+
+            <p class="recipe"><span class="h2">Directions :</span><br>
+              <b>Step 1: Prepare saffron and kewra water</b><br>
+              To prepare this mouth-watering biryani recipe, soak saffron in water to prepare saffron water. Next, mix
+              kewra drops in water and mix well to make kewra water.<br>
+              <b>Step 2: Saute onions and tomatoes for 2-3 minutes</b><br>
+              In the meanwhile, heat refined oil in a deep bottomed pan. Once the oil is hot enough. Add cumin seeds,
+              bay leaf, green cardamom, black cardamom, cloves in it, and saute for about a minute. Then, add chopped
+              onion in it and saute until pink. Now, add chicken into it with slit green chillies, turmeric, salt to
+              taste, ginger garlic paste, red chilli powder, and 2 green chilli paste. Mix well all the spices and cook
+              for 2-3 minutes. Then, add hung curd into it.<br>
+              <b>Step 3: Cook on low heat for 5-6 minutes</b><br>
+              Turn the flame to medium again and add garam masala in it along with ginger julienned, coriander and mint
+              leaves. Add kewra water, rose water and saffron water in it. Cook till the chicken is tender.<br>
+              <b>Step 4: Serve hot with your favourite chutney or raita</b><br>
+              Then add 1 cup cooked rice and spread evenly. Then add saffron water and pour ghee over it. Cook for 15-20
+              minutes with closed lid and garnish with 1 tbsp fried onions and coriander leaves. Serve hot.
+            </p>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="left">
+            <div class="top" id="top4">
+              <!-- Here we changed the word from 'Stufent' to 'Student' -->
+              <h3 class="name">Veg Biryaani <span class="veg"></span></h3>
+              <p class="cook-time">Cooking Time : 45 mins</p>
+            </div>
+            <div class="middle">
+              <div id="serv">Servings: 4</div>
+            </div>
+            <div class="bottom">
+              <button class="profile-action">By <span class="by">Kane Thomas</span> </button>
+              <div class="like">
+                <button>Like <span>&#128077</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+
+            <p class="ingre"><span class="h3">Ingredients :</span>
+              <b>For Biryani Rice (A):</b>
+
+              250 g basmati rice,
+              2 cloves,
+              2 green cardamom pods,
+              3 black peppercorn,
+              5 cm cinnamon,
+              1 bay leaves,
+              5 star-point star anise,
+              Sufficient salt to season the water, and
+              1 liter boiling water.<br>
+
+              <b>For the vegetable (B):</b>
+
+              2 tbsp ghee,
+              2 cloves,
+              2 green cardamom pods,
+              3 black peppercorn,
+              5 cm cinnamon stick,
+              1 bay leaves,
+              5 star-point star anise,
+              100 g tomatoes, about 1 medium size,
+              100 g cauliflower, cut to small florets,
+              70 g carrots, cut small dice,
+              70 g French beans, cut into short strips,
+              70 g frozen green peas,
+              2 tsp ground coriander,
+              1 tsp ginger, minced,
+              1 tbsp garlic, minced,
+              1 tsp turmeric powder,
+              1/2 tsp chili powder,
+              1/2 tsp salt,
+              100 ml plain yogurt,
+              200 ml hot water,
+              2 tbsp fried shallots,
+              A handful mint leaves, and
+              A handful coriander leaves.
+
+            </p>
+
+            <p class="recipe"><span class="h2">Directions :</span><br>
+              <b>Soaking and half-cooked the rice:</b><br>
+
+              Soak and boil the rice for at least half an hour.
+              Soak the basmati rice in water for at least 30 minutes.
+              Cook the rice with some salt and the herbs as in ingredient (A).
+              It will take about three minutes, depends on the volume and the heat.
+              Drained and set aside.<br>
+
+              <b>Cook the vegetables:</b><br>
+
+              Melt the butter or ghee in a thick bottom pot or pan. Throw in the whole spices (bay leaf, cloves,
+              cardamom, black peppercorn, and cinnamon bark). Saute it over low heat to let the flavor of the spices
+              infused into the oil.
+              Add the tomato in small cubes, cauliflower in small florets, carrot and French bean in short strips.
+              Add the remaining herbs, spices, and seasonings. (Ground coriander, ground turmeric, chili powder, and of
+              course ginger and garlic paste, and salt to season.
+              Add the yogurt and vegetable stock to cook the vegetable for five to ten minutes until they turn soft.<br>
+
+              <b>Cook the rice using dum method (cooked with steam):</b><br>
+
+              Layer the rice on top of the vegetable in the pot.
+              Add some mint leaves, coriander leaves, and fried shallots. Close tight.
+            </p>
+          </div>
+        </div>
+
+      </section>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#1769 Top</button>
+  </header>
+  <script>
+    //Top Button function.....
+    function topFunction() {
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    } 
+  </script>
+
+</body>
+
+</html>

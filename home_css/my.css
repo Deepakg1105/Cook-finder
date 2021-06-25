@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+header
+{
+    background-image:linear-gradient(rgba(0,0,0,.5),rgba(95, 214, 111, 0.5),rgba(88, 113, 165, 0.8)), url(../front1.jpg);
+    height: 100vh;
+    background-size:cover;
+    background-position: center;
+    margin-top: 0px;
+
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 5.625vw;
+}
+ul li
+{
+  display: inline-block;  
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0.45vw 1.5vw;
+    border: 1px double transparent;
+    border-radius: 10% 0% 10% 0%;
+    font-size: 1.5vw;
+    transition: 1s ease;
+}
+ul li a:hover
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    color:rgba(210, 219, 219, 0.8);
+    font-size:2.25vw;
+    border-style: groove hidden groove hidden;
+    border-color: rgba(231, 235, 26, 0.8);
+    border-radius: 10% 0% 10% 0%;
+}
+ul li.active a{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    
+}
+
+.logo img
+{
+    float: left;
+    width: 13.5vw;
+    height: 3.75vw;
+    border: 0.15vw rgb(59, 9, 139);
+    margin-top: 3.75vw;
+    border-radius: 5% 0% 20% 0%;
+    border-style: hidden dotted double solid;
+ 
+ }
+.main
+{
+    max-width: 95.25vw;
+    margin: auto;
+}
+.title
+{
+  position: absolute;  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+}
+.title h1{
+    color: white;
+    font-size: 9vw;
+    font-family: "Quintessential";
+}
+.button
+{
+    position: absolute;  
+    top: 64%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    list-style-type: none;
+    color: salmon;
+}
+.button .btn{
+    color: rgb(6, 121, 111);
+    font-size: 1.5vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0.225vw 1.875vw;
+    border: 1px  rgba(138, 89, 61, 0.5);
+    text-decoration: none;
+    border-style: groove hidden hidden double;
+    transition: 1s ease;
+}
+.button .btn:hover{
+    background-color: rgba(0, 0, 0, .5);
+    color:rgb(248, 239, 239);
+    font-size: 2.5vw;
+    border-color: white;
+}
+
+
+   

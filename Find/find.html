@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Cook</title>
+  <link rel="stylesheet" type="text/css" href="find_css/findCSS.css">
+
+  <style>
+    section {
+      padding-top: 130px;
+
+      padding-bottom: 100px;
+    }
+
+    section .card1 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    section .card2 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .top {
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .card1 {
+      height: 475px;
+      width: 325px;
+      box-shadow: 0px 5px 15px 0px rgba(153, 153, 153, 0.5);
+      border-radius: 4px;
+      background-image: linear-gradient(rgba(49, 43, 43, 0.8), rgba(95, 214, 111, 0.8), rgba(88, 113, 165, 0.4));
+      margin-left: 200px;
+
+
+
+    }
+
+    .card1:hover {
+
+      background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(95, 214, 111, 0.5), rgba(88, 113, 165, 0.8)), url();
+      box-shadow: 0px 25px 25px 20px rgba(84, 102, 151, 0.425);
+    }
+
+    .card2 {
+      height: 475px;
+      width: 325px;
+      box-shadow: 0px 5px 15px 0px rgba(153, 153, 153, 0.5);
+      border-radius: 4px;
+      background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(95, 214, 111, 0.5), rgba(89, 110, 53, 0.8)), url();
+      margin-left: 700px;
+    }
+
+    .card2:hover {
+      background-image: linear-gradient(rgba(34, 23, 95, 0.8), rgba(95, 214, 111, 0.5), rgba(211, 73, 32, 0.9)), url();
+      box-shadow: 0px 25px 25px 20px rgba(75, 110, 90, 0.8);
+    }
+
+
+    .top1 {
+      height: 55%;
+      border-radius: 4px 4px 0px 0px;
+      border: 1px solid #ddd;
+      /* Setting a background image */
+      background-image: url(womenCook1.png);
+      padding: 0px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+
+    .top2 {
+      height: 55%;
+      border-radius: 4px 4px 0px 0px;
+      border: 1px solid #ddd;
+      /* Setting a background image */
+      background-image: url(menCook5.png);
+      padding: 0px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+
+    .top3 {
+      height: 55%;
+      border-radius: 4px 4px 0px 0px;
+      border: 1px solid #ddd;
+      /* Setting a background image */
+      background-image: url(menCook3.jpg);
+      padding: 0px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+
+    .top4 {
+      height: 55%;
+      border-radius: 4px 4px 0px 0px;
+      border: 1px solid #ddd;
+      /* Setting a background image */
+      background-image: url(womenCook3.png);
+      padding: 0px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+
+    .top5 {
+      height: 55%;
+      border-radius: 4px 4px 0px 0px;
+      border: 1px solid #ddd;
+      /* Setting a background image */
+      background-image: url(menCook2.png);
+      padding: 0px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+
+    .top6 {
+      height: 55%;
+      border-radius: 4px 4px 0px 0px;
+      border: 1px solid #ddd;
+      /* Setting a background image */
+      background-image: url(womenCook2.png);
+      padding: 0px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+
+    .top7 {
+      height: 55%;
+      border-radius: 4px 4px 0px 0px;
+      border: 1px solid #ddd;
+      /* Setting a background image */
+      background-image: url(womenCook7.png);
+      padding: 0px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+
+    .top8 {
+      height: 55%;
+      border-radius: 4px 4px 0px 0px;
+      border: 1px solid #ddd;
+      /* Setting a background image */
+      background-image: url(menCook4.png);
+      padding: 0px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+
+    .top9 {
+      height: 55%;
+      border-radius: 4px 4px 0px 0px;
+      border: 1px solid #ddd;
+      /* Setting a background image */
+      background-image: url(menCook5.png);
+      padding: 0px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+
+    .top10 {
+      height: 55%;
+      border-radius: 4px 4px 0px 0px;
+      border: 1px solid #ddd;
+      /* Setting a background image */
+      background-image: url(womenCook5.png);
+      padding: 0px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+
+    .top11 {
+      height: 55%;
+      border-radius: 4px 4px 0px 0px;
+      border: 1px solid #ddd;
+      /* Setting a background image */
+      background-image: url(womenCook6.png);
+      padding: 0px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+
+    .name {
+      padding-top: calc(475px * 0.40);
+      margin: 0px;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px red;
+      font-family: 'Open Sans', sans-serif;
+      transition: 0.2s ease;
+
+    }
+
+    .name:hover {
+      font-size: 130%;
+
+    }
+
+    .veg-symbol {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 4px;
+      margin-right: 4px;
+
+      border-radius: 5px;
+      background-color: rgb(23, 252, 2);
+
+    }
+
+    .nonveg-symbol {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 4px;
+      margin-right: 4px;
+
+      border-radius: 5px;
+      background-color: rgb(68, 21, 21);
+
+    }
+
+    .exp {
+      margin-top: 8px;
+      float: none;
+      color: green;
+
+    }
+
+    .exp:hover {
+      background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(95, 214, 111, 0.5), rgba(88, 113, 165, 0.1));
+      color: black;
+    }
+
+    .exp span {
+      color: #00005f;
+      text-shadow: 2px 2px white;
+      font-family: 'Open Sans', sans-serif;
+      transition: 0.4s ease;
+    }
+
+    .exp span:hover {
+
+      text-shadow: 2px 2px white;
+      color: red;
+      font-size: 120%;
+    }
+
+    .middle {
+      height: 5%;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      padding: 0px 16px;
+      font-family: 'Open Sans', sans-serif
+    }
+
+    .veg {
+      color: #444;
+      font-size: 0.8em;
+      padding-top: 0.2em;
+      text-shadow: 2px 2px white;
+      font-family: 'Open Sans', sans-serif
+    }
+
+    .bottom {
+      height: 40%;
+      border-radius: 0px 0px 4px 4px;
+      border: 1px solid #ddd;
+      padding: 8px 16px;
+      font-family: 'Open Sans', sans-serif
+    }
+
+    .profile {
+      display: block;
+      width: 100%;
+      height: 32px;
+      /* You could also just set the font family explicitly like we did for the body. */
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1em;
+      text-align: left;
+      /* The border-radius property allows for round corners. */
+      border-radius: 4px;
+      border: 0px;
+      background-color: #00A5D2;
+      color: white;
+      /* This is how we changed the cursor to be a hand instead of an arrow. */
+      cursor: auto;
+      margin-top: 2px;
+      padding-left: 5px;
+
+    }
+
+    .profile:hover {
+      text-shadow: 2px 2px red;
+    }
+
+    .more {
+      color: #19ffaf;
+
+      float: right;
+      text-decoration: none;
+      font-family: cursive;
+    }
+
+    .more:hover {
+      font-family: sans-serif;
+      color: white;
+      text-shadow: 2px 2px red;
+      font-size: 150%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <div class="Header" id="head">
+      <div class="logo">
+        <img src="logo.png" alt="cook finder logo">
+      </div>
+
+      <ul>
+        <li><a href="../Home.html" target="_self">Home</a></li>
+        <li><a href="../recipes/recipes.html" target="_self">Recipes</a></li>
+        <li><a href="../Follow_Us/follow.html" target="_self" target="_self">Follow Us</a></li>
+        <li><a href="../Terms/TandC.html" target="_self">T & C s</a></li>
+        <li><a href="#"
+            onClick="window.open('../Share/share.html','Share','resizable,height=260,width=370'); return false;">Share</a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <section>
+        <div class="card1">
+          <div class="top1" class="top">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">DeepikaG</h3>
+            <p class="exp">Experience : <span> 2 Years</span></p>
+          </div>
+          <div class="middle">
+            <div class="veg"><span class="veg-symbol"></span>Veg </div>
+          </div>
+          <div class="bottom">
+            <button class="profile">Speciality : Rajasthani</button>
+            <button class="profile">Location Availabilty :Bagaluru</button>
+            <button class="profile">Expected Payment: 0000 Rs.</button>
+            <button class="profile">Rating : &#9733 &#9733 &#9733 &#9733 &#9734 </button>
+            <a href="#" class="more" onclick="logIn();">More Information</a>
+          </div>
+        </div>
+
+
+        <div class="card2" class="card">
+          <div class="top3" class="top">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Prasanna KM</h3>
+            <p class="exp">Experience : <span>5 Years</span></p>
+          </div>
+          <div class="middle">
+            <div class="veg"><span class="nonveg-symbol"></span>Veg & Non-veg </div>
+          </div>
+          <div class="bottom">
+            <button class="profile">Speciality : South-Indian</button>
+            <button class="profile">Location Availabilty :Harohalli</button>
+            <button class="profile">Expected Payment: 2200 Rs.</button>
+            <button class="profile">Rating : &#9733 &#9733 &#9733 &#9733 &#9734 </button>
+            <a href="#" class="more" onclick="logIn();">More Information</a>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="top2" class="top">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Kumar Shanu</h3>
+            <p class="exp">Experience : <span> No Experience</span></p>
+          </div>
+          <div class="middle">
+            <div class="veg"><span class="nonveg-symbol"></span>Veg & Non-veg </div>
+          </div>
+          <div class="bottom">
+            <button class="profile">Speciality : North-Indian</button>
+            <button class="profile">Location Availabilty :Gantaganahalli</button>
+            <button class="profile">Expected Payment: 1500 Rs.</button>
+            <button class="profile">Rating : NA</button>
+            <a href="#" class="more" onclick="logIn();">More Information</a>
+          </div>
+        </div>
+
+
+        <div class="card2">
+          <div class="top4" class="top">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Magunta Parvathamma</h3>
+            <p class="exp">Experience : <span>3 Years</span></p>
+          </div>
+          <div class="middle">
+            <div class="veg"><span class="nonveg-symbol"></span>Veg & Non-veg </div>
+          </div>
+          <div class="bottom">
+            <button class="profile">Speciality : Aandhra-Style</button>
+            <button class="profile">Location Availabilty :Harohalli</button>
+            <button class="profile">Expected Payment: 2000 Rs.</button>
+            <button class="profile">Rating : &#9733 &#9733 &#9733 &#9734 &#9734 </button>
+            <a href="#" class="more" onclick="logIn();">More Information</a>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="top5" class="top">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Podel Sajan</h3>
+            <p class="exp">Experience : <span> No Experience</span></p>
+          </div>
+          <div class="middle">
+            <div class="veg"><span class="nonveg-symbol"></span>Veg & Non-veg </div>
+          </div>
+          <div class="bottom">
+            <button class="profile">Speciality : North-Indian</button>
+            <button class="profile">Location Availabilty :Bagalur, Harohalli</button>
+            <button class="profile">Expected Payment: 1300 Rs.</button>
+            <button class="profile">Rating : NA</button>
+            <a href="#" class="more" onclick="logIn();">More Information</a>
+          </div>
+        </div>
+
+
+        <div class="card2">
+          <div class="top6" class="top">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Keerthi S.</h3>
+            <p class="exp">Experience : <span>2.5 Years</span></p>
+          </div>
+          <div class="middle">
+            <div class="veg"><span class="nonveg-symbol"></span>Veg & Non-veg </div>
+          </div>
+          <div class="bottom">
+            <button class="profile">Speciality : South-Indian</button>
+            <button class="profile">Location Availabilty :Avalahalli, Harohalli</button>
+            <button class="profile">Expected Payment: 1800 Rs.</button>
+            <button class="profile">Rating : &#9733 &#9733 &#9734 &#9734 &#9734 </button>
+            <a href="#" class="more" onclick="logIn();">More Information</a>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="top7" class="top">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Dibya Chatterji</h3>
+            <p class="exp">Experience : <span> 2 Years</span></p>
+          </div>
+          <div class="middle">
+            <div class="veg"><span class="veg-symbol"></span>Veg & Non-veg </div>
+          </div>
+          <div class="bottom">
+            <button class="profile">Speciality : Bengali, Eastern</button>
+            <button class="profile">Location Availabilty :Near Bagaluru</button>
+            <button class="profile">Expected Payment: 1700 Rs.</button>
+            <button class="profile">Rating : &#9733 &#9733 &#9733 &#9733 &#9733 </button>
+            <a href="#" class="more" onclick="logIn();">More Information</a>
+          </div>
+        </div>
+
+
+        <div class="card2" class="card">
+          <div class="top8" class="top">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">KS Suriya</h3>
+            <p class="exp">Experience : <span>1 Year</span></p>
+          </div>
+          <div class="middle">
+            <div class="veg"><span class="nonveg-symbol"></span>Veg & Non-veg </div>
+          </div>
+          <div class="bottom">
+            <button class="profile">Speciality : South-Indian</button>
+            <button class="profile">Location Availabilty :Kenchanhalli</button>
+            <button class="profile">Expected Payment: 1200 Rs.</button>
+            <button class="profile">Rating : &#9733 &#9733 &#9733 &#9734 &#9734 </button>
+            <a href="#" class="more" onclick="logIn();">More Information</a>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="top9" class="top">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Joginder Singh</h3>
+            <p class="exp">Experience : <span> No Experience</span></p>
+          </div>
+          <div class="middle">
+            <div class="veg"><span class="nonveg-symbol"></span>Veg & Non-veg </div>
+          </div>
+          <div class="bottom">
+            <button class="profile">Speciality : Punjabi, North-Indian</button>
+            <button class="profile">Location Availabilty :Near Nagenhalli</button>
+            <button class="profile">Expected Payment: 1500 Rs.</button>
+            <button class="profile">Rating : NA</button>
+            <a href="#" class="more" onclick="logIn();">More Information</a>
+          </div>
+        </div>
+
+
+        <div class="card2">
+          <div class="top10" class="top">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Sarojini Parvathamm</h3>
+            <p class="exp">Experience : <span>1.5 Years</span></p>
+          </div>
+          <div class="middle">
+            <div class="veg"><span class="nonveg-symbol"></span>Veg & Non-veg </div>
+          </div>
+          <div class="bottom">
+            <button class="profile">Speciality : Aandhra-Style</button>
+            <button class="profile">Location Availabilty :Harohalli</button>
+            <button class="profile">Expected Payment: 1500 Rs.</button>
+            <button class="profile">Rating : &#9733 &#9733 &#9733 &#9734 &#9734 </button>
+            <a href="#" class="more" onclick="logIn();">More Information</a>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="top11" class="top">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Bala</h3>
+            <p class="exp">Experience : <span> 6 Years</span></p>
+          </div>
+          <div class="middle">
+            <div class="veg"><span class="nonveg-symbol"></span>Veg & Non-veg </div>
+          </div>
+          <div class="bottom">
+            <button class="profile">Speciality : All type</button>
+            <button class="profile">Location Availabilty :Bagalur, Harohalli</button>
+            <button class="profile">Expected Payment: 1500 Rs.</button>
+            <button class="profile">Rating :&#9733 &#9733 &#9733 &#9733 &#9734 </button>
+            <a href="#" class="more" onclick="logIn();">More Information</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#1769 Top</button>
+  </header>
+  <script>
+    function logIn() {
+      let usrName = prompt("Login to get more information\nEnter your name : ", "your name here");
+      if (!(typeof usrName === 'string'))
+        return false;
+      let pass = prompt("Enter password : ", "your password here");
+      //document.write("You have entered : " + retVal);
+      let valid = validate(usrName, pass);
+      if (valid) {
+        alert("The requested information has been sent to your email address!");
+
+      }
+      else {
+        alert("Invalid userName or password! Try again...\n New to cook Finder? create account to get more information.");
+      }
+      return false;
+
+    }
+
+    function validate(userName, userPass) {
+
+      return (validationMail(userName) && validationPass(userPass));
+
+    }
+
+    function validationPass(userPass) {
+      let passFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+      let password = userPass;
+      if (password.match(passFormat)) {
+        //document.login_form.pass.focus();
+        return true;
+      }
+      else {
+        //document.login_form.pass.focus();
+        alert("Invalid Username or password!");
+        return false;
+      }
+
+
+    }
+    function validationMail(inputMail) {
+      let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+      console.log("Inside function");
+      if (inputMail.match(mailFormat)) {
+
+        return true;
+      }
+      else {
+        //alert("Invalid Username or password!");
+        return false;
+      }
+    }
+
+    //Top Button function....
+    function topFunction() {
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    } 
+  </script>
+</body>
+
+</html>

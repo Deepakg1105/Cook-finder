@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header
+{
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(95, 214, 111, 1),rgba(88, 113, 165, 0.3)), url(../tnc.jpg);
+    height: 100%;
+    background-size:cover;
+    background-position: center;
+    margin-top: 0vw;
+    opacity: 0.9;
+
+}
+
+
+header .main
+{
+    margin-top: 0vw;
+    padding-left: 1.8vw;
+}
+
+header .main .logo img
+{
+    float: left;
+    width: 13.5vw;
+    height: 3.75vw;
+    border: 0.15vw rgb(59, 9, 139);
+    margin-top: 3.75vw;
+    
+    border-radius: 5% 0% 20% 0%;
+    border-style: hidden dotted double solid;
+ 
+ }
+
+
+header .main ul{
+
+    float: right;
+    list-style-type: none;
+    margin-top: 5.625vw;
+}
+header .main ul li
+{
+  display: inline-block;  
+}
+
+header .main ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0.45vw 1.5vw;
+    border: 1px double transparent;
+    border-radius: 10% 0% 10% 0%;
+    font-size: 1.5vw;
+    transition: 1s ease;
+}
+header .main ul li a:hover
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    color:rgba(210, 219, 219, 0.8);
+    font-size:2.25vw;
+    border-style: groove hidden groove hidden;
+    border-color: rgba(231, 235, 26, 0.8);
+    border-radius: 10% 0% 10% 0%;
+}
+header .main ul li.active a{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    
+}
+
+header .terms
+{
+    padding-top: 9.75vw;
+    padding-left: 2.25vw;
+    padding-bottom: 6vw;
+}
+header .terms .main_head
+{
+    color: #afaff0;
+    font-size: 4vw;
+    height: 2.625vw;
+    width: 45vw;
+    
+    
+  
+    padding-left: 30vw;
+    padding-bottom: 2.25vw;
+}
+header .terms .main_head span
+{
+    font-size: 150%;
+}
+header .terms .sub_hd
+{
+    padding-top: 30px;
+}
+header .terms .sub_hd h4{
+    font-size: 130%;
+}
+
+header .terms .sub_hd ul li
+{
+    padding-top: 0.525vw;
+}
+
+#myBtn
+{
+    float: right;
+    margin-right: 50px;
+    background-image:linear-gradient(rgba(224, 39, 39, 0.2),rgb(233, 220, 218),rgba(20, 26, 39, 0.747));
+    height: 70px;
+    width: 120px;
+    font-size: 40px;
+    border-radius: 14px;
+    border-style:  outset inset inset outset;
+    border-color: blue;
+    border-width: 5px;
+    font-family: fantasy;
+    text-shadow: 2px 2px red;
+    color: white;
+    transition: ease 0.5s;
+    
+}
+#myBtn:hover{
+    font-size: 45px;
+    border: none;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.623),rgb(74, 59, 128),rgba(39, 20, 20, 0.788));
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

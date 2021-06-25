@@ -1,0 +1,272 @@
+<html>
+
+<head>
+    <title>find</title>
+    <!--?php include 'reg.php'?-->
+    <style>
+        input:invalid {
+            border: red solid 0.005vw;
+        }
+    </style>
+    <link rel="stylesheet" href="css/reg.css" type="text/css">
+</head>
+
+<body>
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
+        <source src="chef_fire.mp4" type="video/mp4">
+    </video>
+
+
+
+    <section>
+        <div class="menubar">
+            <ul>
+                <li><a href="../Home.html">Home</a></li>
+                <li><a href="../recipes/recipes.html" target="_self">Recipes</a></li>
+                <li><a href="../Follow_Us/follow.html" target="_self">Follow Us</a></li>
+                <li><a href="../Terms/TandC.html" target="_self">T & C s</a></li>
+                <li><a href="#"
+                        onClick="window.open('../Share/share.html','Share','resizable,height=260,width=370'); return false;">Share</a>
+                </li>
+            </ul>
+        </div>
+        <div class="all">
+            <div class="hd">
+                <h1 class="reg_head">Chef Registration</h1>
+            </div>
+            <div class="form">
+                <form action="submit/regSubmit.html" onsubmit="return v1(validate())" name="reg_form" class="reg_card"
+                    id="regi">
+                    <table class="reg_table">
+                        <tr class="row">
+                            <td class="td">Name</td>
+                            <td>
+                                <input type="text" placeholder="name" pattern="[A-z]{1,25}"
+                                    title="Name must be 1 to 25 'letters' only" class="naam" required>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="td">Speciality</td>
+                            <td>
+                                <select name="special" id="spc" required>
+                                    <option value="veg">Veg</option>
+                                    <option value="Nonveg">Non-veg</option>
+                                    <option value="both">both veg & Non-veg</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="td">Availability</td>
+                            <td>
+                                <input type="checkbox" name="Time" value="Full-Time" checked>
+                                <label for="Full">Full-Time</label>
+                                <br>
+                                <input type="checkbox" name="Time" value="Part-Time">
+                                <label for="Part">Part-Time</label>
+
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="td">Experience</td>
+                            <td>
+                                <input type="radio" value="New" name="exp" checked>
+                                <label for="new">New</label><br>
+                                <input type="radio" value="greaterTwo" name="exp">
+                                <label for="twp">More than 1 Year</label><br>
+                                <input type="radio" value="greaterFive" name="exp">
+                                <label for="five">More than 5 Years</label><br>
+                                <input type="radio" value="greaterTen" name="exp">
+                                <label for="ten">More than 10 Years</label>
+
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="td">Service Area</td>
+                            <td>
+                                <select name="area" id="area">
+                                    <option value="">select</option>
+                                    <option value="">Puttanhalli</option>
+                                    <option value="">Anywhere</option>
+                                    <option value="">Nagenhalli</option>
+                                    <option value="">Avalahalli</option>
+                                    <option value="">Harohalli</option>
+                                    <option value="">Gantaganahalli</option>
+                                    <option value="">Menchanahalli</option>
+                                    <option value="">Bagaluru</option>
+                                    <option value="">Anantapura</option>
+                                    <!--option value=""></!--option>
+                                        <option value=""></option>
+                                        <option-- value=""></option-->
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="td">Expected Payment/head</td>
+                            <td>
+                                <select name="payment" id="payment">
+
+                                    <option value="">Rs. 1500</option>
+                                    <option value="">Rs. 2000</option>
+                                    <option value="">more than Rs. 2500</option>
+                                    <label for="negotiable">
+                                        <input type="checkbox" name="negotiable" value="Negotiable" checked><span
+                                            class="span">Negotiable</span>
+                                    </label>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="td">Cooking Type</td>
+                            <td>
+                                <input type="checkbox" name="food_region" value="North" checked>
+                                <label for="north">North_Indian</label>
+                                <br>
+                                <input type="checkbox" name="food_region" value="south">
+                                <label for="south">South-Indian</label>
+                                <br>
+                                <input type="checkbox" name="food_region" value="punjabi">
+                                <label for="punjabi">Punjabi</label>
+                                <br>
+                                <input type="checkbox" name="food_region" value="aandhra">
+                                <label for="aandhra">Aandhra-style</label>
+                                <br>
+                                <input type="checkbox" name="food_region" value="chinese">
+                                <label for="chinese">chinese</label>
+                                <br>
+                                <input type="checkbox" name="food_region" value="eastern">
+                                <label for="eastern">Eastern</label>
+                                <br>
+                                <input type="checkbox" name="food_region" value="rajasthani">
+                                <label for="" rajasthani>Rajasthani</label>
+
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="td">Phone No.</td>
+                            <td>
+                                <input id="ph" type="text" maxlength="10" pattern="[0-9]{8,}"
+                                    title="Phone number must be a valid 10 digit" required value=""
+                                    placeholder="98 XXXX XXXX" name="phone" required>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="td">E-mail ID</td>
+                            <td>
+                                <input type="text" name="email" title="this should be a valid email address"
+                                    placeholder="abc123@gmai.com" required>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="td">Password</td>
+                            <td>
+                                <input type="password" id="psw" name="password"
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                    minlength="8" maxlength="14" placeholder="a1@" required>
+                                <input type="button" value="show" onclick="showPass()">
+                            </td>
+                        </tr>
+
+                    </table>
+                    <div class="reg_submit">
+                        <input type="submit" value="Register" name="submit" class="smt" />
+                    </div>
+                </form>
+                <div class="login">
+                    Already have account <a href="login/login.html">login here</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <script>
+        function showPass() {
+            let x = document.getElementById("psw");
+            if (x.type === "password") {
+                x.type = "text";
+            }
+            else {
+                x.type = "password";
+            }
+        }
+
+        function v1(val) {
+            if (val) {
+                var retVal = confirm("Are you agreed to Terms and Conditions ?");
+                if (retVal == true) {
+                    //document.write ("User wants to continue!");
+                    return true;
+                }
+                else {
+                    document.write("User does not want to continue!");
+                    return false;
+                }
+
+            }
+            return val;
+        }
+        function validate() {
+            return (validationMail(document.reg_form.email) && validationPhone());
+        }
+
+        function validationPhone() {
+            let num = document.getElementById("ph");
+            let number = num.value;
+            if (number.length !== 10) {
+                alert("We are expecting a valid 10 digit Phone Number!");
+                document.reg_form.phone.focus();
+                return false;
+            }
+            if (number < 1000000000) {
+                alert("Invalid! Phone number cannot start with zero!");
+                document.reg_form.phone.focus();
+                return false;
+            }
+            if (number < 2000000000) {
+                alert("Invalid! Phone number cannot start with one!");
+                document.reg_form.phone.focus();
+                return false;
+            }
+            if (number < 3000000000) {
+                alert("Invalid! Phone number cannot start with two!");
+                document.reg_form.phone.focus();
+                return false;
+            }
+            if (number < 4000000000) {
+                alert("Invalid! Phone number cannot start with three!");
+                document.reg_form.phone.focus();
+                return false;
+            }
+            if (number < 5000000000) {
+                alert("Invalid! Phone number cannot start with four!");
+                document.reg_form.phone.focus();
+                return false;
+            }
+            if (number < 6000000000) {
+                alert("Invalid! Phone number cannot start with five!");
+                document.reg_form.phone.focus();
+                return false;
+            }
+
+        }
+        function validationMail(inputMail) {
+            let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            console.log("Inside function");
+            if (inputMail.value.match(mailFormat)) {
+                document.reg_form.email.focus();
+                return true;
+            }
+            else {
+                document.reg_form.email.focus();
+                alert("We are expecting a valid email address!");
+                return false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
