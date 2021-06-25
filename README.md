@@ -1,4 +1,6 @@
 # Cook-Finder : Second-year-frontend-project
+![](cook-finder-home.gif)
+
 Cook Finder is a website which can be used to hire a cook. The website provides details of people available for cooking services. It also contains other features such as cook-registration, organised recipes of different delicious dishes, etc.
 
 ## Contains Web Pages
