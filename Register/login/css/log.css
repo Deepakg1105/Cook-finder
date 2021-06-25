@@ -97,6 +97,16 @@ section .card2
     width: 100%;
     opacity: 0.7;
 }
+section .card2:hover
+{
+    padding-top: 7%;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-bottom: 7%;
+    height: auto;
+    width: 100%;
+    opacity: 1;
+}
 section .card2 .head
 {
 background-color: rgb(67, 245, 31);
