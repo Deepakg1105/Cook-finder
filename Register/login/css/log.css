@@ -87,134 +87,27 @@ body .menubar ul li a:hover
     
     
 }
-
-section .card
+section .card2
 {
-    float: right;
-    background-size:cover;
-    background-position: center;
-    height: 50vh;
-    margin-top: 10%;
-    margin-right: 5%;
-    background-image:linear-gradient(rgba(0,0,0,.5),rgba(95, 214, 111, 0.5),rgba(88, 113, 165, 0.1)), url('');
-    box-shadow: rgba(red, green, blue, 0.7);
-    opacity:;
+    padding-top: 7%;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-bottom: 7%;
+    height: auto;
+    width: 100%;
+    opacity: 0.7;
 }
-section .card .head
+section .card2 .head
 {
-background-color: rgb(92, 128, 107);
-height: 2.85vw;
-  width: 12.75vw;
+background-color: rgb(67, 245, 31);
+height: auto;
+  width: 50%;
   padding-top: 0.225vw;
+  padding-left: 1vw;
   border-radius: 0.375vw 0.525vw 0px 0px;
   border-style: inset groove hidden hidden;
   display: inline-block;  
 }
-
-section .card .head .hd
-{
-    color: white;
-    padding-left: 0.225vw;
-}
-
-section .card .form
-{
-    height: 14.25vw;
-      width: auto;
-     
-      border-radius: 0.3vw;
-      background-image:linear-gradient(rgba(81, 163, 88, 0.1),rgba(233, 73, 10, 0.1),rgba(88, 165, 88, 0.1)),url();
-      opacity: 90%; 
-      padding-left: 0.375vw;
-      padding-top: 0.375vw;
-      box-shadow: 0px 0.375vw 1.125vw 0px rgba(7, 6, 6, .8);
-      opacity: 0.5;
-      background-image: url('../cardpic1.jpg');
-     
-          
-}
-section .card .form:hover
-{
-    height: 14.25vw;
-      width: auto;
-     
-      border-radius: 0.3vw;
-      background-image:linear-gradient(rgba(0,0,0,.1),rgba(233, 73, 10, 0.1),rgba(88, 165, 88, 0.1));
-      opacity: 90%; 
-      padding-left: 0.375vw;
-      padding-top: 0.375vw;
-      box-shadow: 0px 0.375vw 1.125vw 0px rgba(7, 6, 6, .8);
-}
-section .card .form .new
-{
-    margin-top: 0.75vw;
-    font-size: 1.05vw;
-    float:right;
-    color: red;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-section .card .form .new span
-{
-    font-size: 130%;
-}
-section .card .form .new a{
-    text-decoration: none;
-    font-size: 1.5vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-section .card .form .new a:hover{
-    
-    font-size: 1.8vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-
-
-section .card .form .form_card
-{
-    margin-left: 0.6vw;
-    margin-right: 1.2vw;
-}
-section .card .form .form_card .login_card
-{
-    color: rgba(9,87,19,0.8);
-}
-section .card .form .form_card .login_card label{
-    float: right;
-}
-section .card .form .form_card .login_card  .forgot
-{
-    float: left;
-}
-.smt{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
-    color: green;
-    background-color:rgba(223, 195, 73, 0.24);
-    height: 3vw;
-    font-size: 1.5vw;
-    position: center;
-    padding:0px 10.5vw 0.75vw 11.25vw;
-}
-
-.smt:hover{
-    cursor: pointer;
-    background-color: rgba(82, 23, 23, 0.192);
-    color: white;
-    font-style: italic;
-    
-}
-
-
-
-
-.mail{
-    padding: 0.6vw;
-    display: block;
-    border: none;
-    border-bottom: 0.075vw solid #ccc;
-    width: 100%;
-}
-input{
-    cursor: pointer;
+section .card2 .regis{
+    padding-left: 2vw;
 }
