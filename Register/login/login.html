@@ -1,131 +1,143 @@
-<html>                                                            
-    <head>
-        <title>login</title>
-        <link rel="stylesheet" href="css/log.css" type="text/css">
-		<style>
-			input:invalid 
-			{
-				border: red dotted 0.075vw;
-			}
-		</style>
-		<script>
-			function showPass() 
-			{
-			  let x = document.getElementById("psw");
-			  if (x.type === "password") 
-			  {
+<html>
+
+<head>
+	<title>login</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/log.css" type="text/css">
+	<style>
+		input:invalid {
+			border: red dotted 0.075vw;
+		}
+	</style>
+	<script>
+		function showPass() {
+			let x = document.getElementById("exampleInputPassword1");
+			if (x.type === "password") {
 				x.type = "text";
-			  } 
-			  else 
-			  {
+			}
+			else {
 				x.type = "password";
-			  }
 			}
-		
-		
-			function v1(val)
-			{
-				if(val)
-				{
-					
-					var retVal = confirm("Click continue to log in");
-					if( retVal == true ) 
-					{
-					  document.write ("User wants to continue!");
-					  return true;
-					}
-					else 
-					{
-					  //document.write ("User does not want to continue!");
-					  return false;
-					}
-					
-					
+		}
+
+
+		function v1(val) {
+			if (val) {
+
+				var retVal = confirm("Click continue to log in");
+				if (retVal == true) {
+					document.write("User wants to continue!");
+					return true;
 				}
-				return val;
-			}
-			function validate()			
-			{
-				
-				return (validationMail(document.login_form.mail) && validationPass());
-				
-			}
-			
-			function validationPass()
-			{
-				let passFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-				let pass = document.getElementById('psw');
-				let password=pass.value;
-				if(password.match(passFormat))
-				{
-					document.login_form.pass.focus();
-					return true;					
-				}
-				else
-				{
-					document.login_form.pass.focus();
-					alert("Invalid Username or password!");
+				else {
+					//document.write ("User does not want to continue!");
 					return false;
 				}
-				
-						
-			}
-			function validationMail( inputMail )
-			{
-				let mailFormat=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-				
-				console.log("Inside function");
-				if(inputMail.value.match(mailFormat))
-				{
-					document.login_form.mail.focus();
-					return true;					
-				}
-				else
-				{
-					document.login_form.mail.focus();
-					alert("Invalid Username or password!");
-					return false;
-				}
-			}
-		</script>
-    </head>
 
-    <body>
-         <section> 
-            <div class="menubar">
-                <ul>
-                    <li><a href="../../Home.html" >Home</a></li>
-                    <li><a href="../../recipes/recipes.html" target="_self">Recipes</a></li>
-                    <li><a href="../../Follow_Us/follow.html" target="_self">Follow Us</a></li>
-                    <li><a href="../../Terms/TandC.html" target="_self">T & C s</a></li>
-                    <li><a href="#" onClick="window.open('../../Share/share.html','Share','resizable,height=260,width=370'); return false;">Share</a></li>
-                </ul>
-            </div>  
-            <div class="card">                                             
-                <div class="head">
-                    <h2 class="hd">Chef login</h2>
-                </div>
-                <div class="form">    
-                    <div class="form_card">
-                        <form action="nnnn" onsubmit="return v1(validate())" method="GET" class="login_card" name="login_form" id="log">
 
-                            <input type="text" name="mail" placeholder="my_email@gmail.com" title="this should be a valid email address" class="mail" minlength="1">
-                            <label for="mail">Email ID</label><br>
-                            <input type="password" minlength="1" name="pass" id="psw" title="this field cannot be empty" placeholder="password" class="mail" required>
+			}
+			return val;
+		}
+		function validate() {
+
+			return (validationMail(document.login_form.mail) && validationPass());
+
+		}
+
+		function validationPass() {
+			let passFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+			let pass = document.getElementById('psw');
+			let password = pass.value;
+			if (password.match(passFormat)) {
+				document.login_form.pass.focus();
+				return true;
+			}
+			else {
+				document.login_form.pass.focus();
+				alert("Invalid Username or password!");
+				return false;
+			}
+
+
+		}
+		function validationMail(inputMail) {
+			let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+			console.log("Inside function");
+			if (inputMail.value.match(mailFormat)) {
+				document.login_form.mail.focus();
+				return true;
+			}
+			else {
+				document.login_form.mail.focus();
+				alert("Invalid Username or password!");
+				return false;
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<section>
+		<div class="menubar">
+			<ul>
+				<li><a href="../../Home.html">Home</a></li>
+				<li><a href="../../recipes/recipes.html" target="_self">Recipes</a></li>
+				<li><a href="../../Follow_Us/follow.html" target="_self">Follow Us</a></li>
+				<li><a href="../../Terms/TandC.html" target="_self">T & C s</a></li>
+				<li><a href="#"
+						onClick="window.open('../../Share/share.html','Share','resizable,height=260,width=370'); return false;">Share</a>
+				</li>
+			</ul>
+		</div>
+		<div class="card-deck card2 ">
+
+			<div class="card">
+				<div class="head">
+					<h2 class="card-title text-danger"> Chef Login </h2>
+
+				</div>
+				<div class="card-body">
+
+					<form action="nnnn" onsubmit="return v1(validate())" method="GET" name="login_form">
+						<div class="form-group">
+							<label for="mail">Email address</label>
+							<input type="email" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="my_email@gmail.com"
+								title="this should be a valid email address" minlength="5" required>
+							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+								else.</small>
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" class="form-control" id="exampleInputPassword1"
+								title="this field cannot be empty" placeholder="Password" required>
+							<input type="checkbox" onclick="showPass()"> show password
+						</div>
+
+						<a href="#" class="forgot">Forgot password?</a><br>
+						<button type="submit" class="btn btn-outline-success btn-lg btn-block">Login me</button>
+					</form>
+					<!--form action="nnnn" onsubmit="return v1(validate())" method="GET" class="" name="login_form" id="">
+
+                            <input type="text" name="mail" placeholder="my_email@gmail.com" title="this should be a valid email address" class="" minlength="1">
+                            <label for="mail" >Email ID</label><br>
+                            <input type="password" minlength="1" name="pass" id="" title="this field cannot be empty" placeholder="password" class="" required>
 							show <input type="checkbox" onclick="showPass()">
                             <label for="password">Password</label><br>
                             <a href="#" class="forgot">Forgot password?</a>                                                
 							
 							<div>
-								<input type="submit" value="Login" class="smt"/>
+								<input type="submit" value="Login" class=""/>
 							</div>
-						</form>
-					</div>
-                    <div class="new">
-                        New to <span>Cook Finder </span><a href="../register.html"> Register here</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-    </body>
+						</form-->
+				</div>
+				<div class="regis">
+					New to <span>Cook Finder </span><a href="../register.html"> Register here</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
